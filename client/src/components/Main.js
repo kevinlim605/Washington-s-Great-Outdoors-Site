@@ -1,4 +1,6 @@
-import React, {Component} from "react";
+import React, { Component, Fragment} from "react";
+import Header from "./Header";
+import Footer from "./Footer";
 
 class Main extends Component {
     constructor(props) {
@@ -10,7 +12,32 @@ class Main extends Component {
 
     render() {
         return(
-            <h1>Hello World!</h1>
+            <Fragment>
+                <Header />
+                <div className="main container">
+                    <div className="row">
+                        <div className="col">
+                            <h1>Body Section</h1>
+                            <h1>Body Section</h1>
+                            <h1>Body Section</h1>
+                            <h1>Body Section</h1>
+                            <h1>Body Section</h1>
+                            <h1>Body Section</h1>
+                            <h1>Body Section</h1>
+                            <h1>Body Section</h1>
+                            <h1>Body Section</h1>
+                            <h1>Body Section</h1>
+                            <h1>Body Section</h1>
+                            <h1>Body Section</h1>
+                            <h1>Body Section</h1>
+                            <h1>Body Section</h1>
+                            <h1>Body Section</h1>
+                            <h1>Body Section</h1>
+                        </div>
+                    </div>
+                </div>
+                <Footer />
+            </Fragment>
         )
     }
 }

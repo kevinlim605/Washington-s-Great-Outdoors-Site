@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Overpass";
+  src: url("./fonts/overpass-bold.otf");
+}
+
+body {
+  font-family: "Overpass";
+}
+
+.jumbotron {
+  text-align: left;
+  margin: 0;
+}
+
+.main {
+  margin-bottom: 100px;
+}
+
+.site-footer {
+  background-image: linear-gradient(#cec8ff, white);
+  padding: 20px 0;
+}
