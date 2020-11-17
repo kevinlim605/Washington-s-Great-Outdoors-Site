@@ -17,22 +17,6 @@ class Main extends Component {
                 <div className="main container">
                     <div className="row">
                         <div className="col">
-                            <h1>Body Section</h1>
-                            <h1>Body Section</h1>
-                            <h1>Body Section</h1>
-                            <h1>Body Section</h1>
-                            <h1>Body Section</h1>
-                            <h1>Body Section</h1>
-                            <h1>Body Section</h1>
-                            <h1>Body Section</h1>
-                            <h1>Body Section</h1>
-                            <h1>Body Section</h1>
-                            <h1>Body Section</h1>
-                            <h1>Body Section</h1>
-                            <h1>Body Section</h1>
-                            <h1>Body Section</h1>
-                            <h1>Body Section</h1>
-                            <h1>Body Section</h1>
                         </div>
                     </div>
                 </div>
