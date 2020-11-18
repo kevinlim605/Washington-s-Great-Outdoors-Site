@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Jumbotron } from "reactstrap";
-import { AppBar, Toolbar, IconButton, Typography, Button, makeStyles } from "@material-ui/core";
+import { AppBar, Toolbar, IconButton, Typography, Button, makeStyles, Menu } from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles((theme) => ({
@@ -30,18 +30,18 @@ function Header() {
                 </div>
             </Jumbotron>
             <div className={classes.root}>
-            <AppBar position="static">
-                <div class="container">
+            {/* AppBar and ToolBar used in conjunction. Appbar gives styling. Toolbar gives positioning,
+                and structure. */}
+            <AppBar position="static" color="secondary">
                 <Toolbar>
                     <IconButton className={classes.menuButton} color="inherit" aria-label="menu">
                         <MenuIcon />
                     </IconButton>
                     <Typography className={classes.title} variant="h6">
-                        News
+                        Menu
                     </Typography>
                     <Button color="inherit">Login</Button>
                 </Toolbar>
-                </div>
             </AppBar>
             </div>
         </Fragment>
