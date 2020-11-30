@@ -20,3 +20,10 @@ body {
   background-image: linear-gradient(#cec8ff, white);
   padding: 20px 0;
 }
+
+.test {
+  background-image: url("./images/nature-landscape.jpg");
+  background-size: cover;
+  color: white;
+  height: 500px;
+}

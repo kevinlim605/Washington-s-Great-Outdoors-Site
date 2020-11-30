@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Jumbotron } from "reactstrap";
-import { AppBar, Toolbar, IconButton, Typography, Button, makeStyles, Menu } from "@material-ui/core";
+import { AppBar, Toolbar, IconButton, Typography, Button, makeStyles } from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles((theme) => ({
@@ -36,6 +36,7 @@ function Header() {
                 <Toolbar>
                     <IconButton className={classes.menuButton} color="inherit" aria-label="menu">
                         <MenuIcon />
+
                     </IconButton>
                     <Typography className={classes.title} variant="h6">
                         Menu
