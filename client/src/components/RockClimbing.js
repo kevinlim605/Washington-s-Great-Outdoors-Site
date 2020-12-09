@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 
-function Kayaking() {
+function RockClimbing() {
     return(
         <Container>
-            <Row>
+            <Row className="mt-5">
                 <Col>
                     <Link to="/home">
                         Home
@@ -96,4 +96,4 @@ function Kayaking() {
     )
 }
 
-export default Kayaking;
+export default RockClimbing;

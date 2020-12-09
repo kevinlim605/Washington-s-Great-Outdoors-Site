@@ -1,67 +1,98 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import { Container, Row, Col } from "reactstrap";
 
 function Fishing() {
     return(
-        <div className="container">
-            <div className="row">
-                <div className="col">
+        <Container>
+            <Row>
+                <Col>
                     <Link to="/home">
                         Home
                     </Link>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col">
-                    <a href="https://placeholder.com"><img src="https://via.placeholder.com/390x270"/></a>
-                </div>
-                <div className="col">
+                </Col>
+            </Row>
+            <Row className="mt-4">
+                <Col xs={{ size: "5" }}>
+                    <a href="https://placeholder.com">
+                        <img 
+                            src="https://via.placeholder.com/390x270" 
+                            alt="loc 1"
+                            className="rounded float-left"
+                        />
+                    </a>
+                </Col>
+                <Col xs={{ size: "4" }}>
                     <h4>Name</h4>
                     <p><b>Type of Catch:</b></p>
                     <p><b>Description:</b></p>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col">
-                    <a href="https://placeholder.com"><img src="https://via.placeholder.com/390x270"/></a>
-                </div>
-                <div className="col">
+                </Col>
+            </Row>
+            <Row className="mt-4">
+                <Col xs={{ size: "5" }}>
+                    <a href="https://placeholder.com">
+                        <img 
+                            src="https://via.placeholder.com/390x270" 
+                            alt="loc 1"
+                            className="rounded float-left"
+                        />
+                    </a>
+                </Col>
+                <Col xs={{ size: "4" }}>
                     <h4>Name</h4>
                     <p><b>Type of Catch:</b></p>
                     <p><b>Description:</b></p>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col">
-                <a href="https://placeholder.com"><img src="https://via.placeholder.com/390x270"/></a>
-                </div>
-                <div className="col">
+                </Col>
+            </Row>
+            <Row className="mt-4">
+                <Col xs={{ size: "5" }}>
+                    <a href="https://placeholder.com">
+                        <img 
+                            src="https://via.placeholder.com/390x270" 
+                            alt="loc 1"
+                            className="rounded float-left"
+                        />
+                    </a>
+                </Col>
+                <Col xs={{ size: "4" }}>
                     <h4>Name</h4>
                     <p><b>Type of Catch:</b></p>
                     <p><b>Description:</b></p>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col">
-                    <a href="https://placeholder.com"><img src="https://via.placeholder.com/390x270"/></a>
-                </div>
-                <div className="col">
+                </Col>
+            </Row>
+            <Row className="mt-4">
+                <Col xs={{ size: "5" }}>
+                    <a href="https://placeholder.com">
+                        <img 
+                            src="https://via.placeholder.com/390x270" 
+                            alt="loc 1"
+                            className="rounded float-left"
+                        />
+                    </a>
+                </Col>
+                <Col xs={{ size: "4" }}>
                     <h4>Name</h4>
                     <p><b>Type of Catch:</b></p>
                     <p><b>Description:</b></p>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col">
-                    <a href="https://placeholder.com"><img src="https://via.placeholder.com/390x270"/></a>
-                </div>
-                <div className="col">
+                </Col>
+            </Row>
+            <Row className="mt-4">
+                <Col xs={{ size: "5" }}>
+                    <a href="https://placeholder.com">
+                        <img 
+                            src="https://via.placeholder.com/390x270" 
+                            alt="loc 1"
+                            className="rounded float-left"
+                        />
+                    </a>
+                </Col>
+                <Col xs={{ size: "4" }}>
                     <h4>Name</h4>
                     <p><b>Type of Catch:</b></p>
                     <p><b>Description:</b></p>
-                </div>
-            </div>
-        </div>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
