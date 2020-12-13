@@ -1,12 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function About() {
     return( 
         <div className="container">
-            <Link to="/home">
-                Home
-            </Link>
             <div className="row">
                 <div className="col">
                     <h1>Our Mission</h1>

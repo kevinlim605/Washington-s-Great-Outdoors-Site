@@ -32,9 +32,6 @@ function Directory() {
       <div className="mt-4">
         <h2 className="text-center">Explore!</h2>
       </div>
-      <Link to="/home">
-        Home
-      </Link>
       <Row className="mt-4">
         <Col xs={{size: "4"}}>
           <Card className={classes.root}>

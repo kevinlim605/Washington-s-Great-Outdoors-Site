@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Formik, Field, Form } from "formik";
 import * as yup from "yup";
 import { makeStyles, Button, TextField, Checkbox, Select, MenuItem, FormControl, InputLabel } from "@material-ui/core";
@@ -27,13 +26,11 @@ function Contact() {
 
     return( 
         <Container>
-            <Link to="/home">
-                Home
-            </Link>
             <Row className="mb-4 mt-4">
                 <Col>
                     <h1>Contact Us</h1>
-                    <h4>Send Us Your Feedback!</h4>
+                    <hr/>
+                    <h4 className="mt-4">Send Us Your Feedback!</h4>
                 </Col>
             </Row>
             <Formik 
@@ -65,7 +62,7 @@ function Contact() {
                                     label="first name"
                                     helperText={props.touched.firstName ? props.errors.firstName : ""}
                                     variant="outlined"
-                                    fullWidth 
+                                    fullWidth
                                     as={TextField}
                                 />
                             </Col>

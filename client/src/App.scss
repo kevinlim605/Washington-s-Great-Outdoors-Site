@@ -3,21 +3,32 @@
   src: url("./fonts/overpass-bold.otf");
 }
 
-body {
-  font-family: "Overpass";
+// Turn off css for chrome browser autofill forms
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
 }
 
-.jumbotron {
-  text-align: left;
-  margin: 0;
+body {
+  font-family: "Overpass";
+  background-color: #f4e1d2;
 }
 
 .main {
   margin-bottom: 200px;
 }
 
+.jumbotron {
+  margin: 0;
+  background-image: url("./images/jumbotron.jpg");
+  background-size: contain;
+}
+
 .site-footer {
-  background-image: linear-gradient(#cec8ff, white);
+  background-color: #86592d;
+  color: white;
   padding: 20px 0;
 }
 
