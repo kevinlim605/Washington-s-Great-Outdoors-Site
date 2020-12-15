@@ -1,14 +1,25 @@
 import React from "react";
 import { Formik, Field, Form } from "formik";
 import * as yup from "yup";
-import { makeStyles, Button, TextField, Checkbox, Select, MenuItem, FormControl, InputLabel } from "@material-ui/core";
+import { makeStyles, Button, TextField, Checkbox, Select, MenuItem, FormControl, FormHelperText, InputLabel, Modal, Backdrop, Fade } from "@material-ui/core";
 import { Container, Row, Col, Label } from "reactstrap";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     select: {
         minWidth: '100%',
-    }
-});
+    },
+    modal: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+    paper: {
+        backgroundColor: theme.palette.background.paper,
+        border: '2px solid #000',
+        boxShadow: theme.shadows[5],
+        padding: theme.spacing(2, 4, 3),
+    },
+}));
 
 const phoneRegex = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
@@ -17,12 +28,47 @@ const validationSchema = yup.object({
     lastName: yup.string().required('Required!').min(2, 'Too Short!').max(50, 'Too Long!'),
     email: yup.string().email('Invalid Email!').required('Required'),
     telNum: yup.string().matches(phoneRegex, 'Invalid Phone Number').required('Required!'),
+    contactType: yup.string().required('Required!'),
     feedback: yup.string().required('Required!')
 })
+
+function TransitionsModal(props) {
+
+    return (
+        <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          className={props.classes.modal}
+          open={props.open}
+          onClose={props.handleClose}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }}
+        >
+          <Fade in={props.open}>
+            <div className={props.classes.paper}>
+              <h2 id="transition-modal-title">Thank you for your feedback!</h2>
+              <p id="transition-modal-description">Please keep in touch!</p>
+            </div>
+          </Fade>
+        </Modal>
+    );
+  }
 
 function Contact() {
 
     const classes = useStyles();
+    const [open, setOpen] = React.useState(false);
+  
+    const handleOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
 
     return( 
         <Container>
@@ -48,6 +94,7 @@ function Contact() {
                     console.log("submit: ", data);
                     resetForm();
                     setSubmitting(false);
+                    handleOpen();
                 }}
                 validationSchema={validationSchema}
             >
@@ -112,24 +159,47 @@ function Contact() {
                                 <Label>May We Contact You?</Label>
                                 <Field
                                     name="agree"
+                                    checked={props.values.agree}
                                     as={Checkbox}
                                 />
                             </Col>
-                            <Col xs={{size: "4"}} className="my-auto">
-                                <FormControl className={classes.select} variant="outlined">
-                                    <InputLabel>contact type</InputLabel>
-                                        <Field
-                                            label="contact type"
-                                            name="contactType"
-                                            as={Select}
-                                        >
-                                            <MenuItem value="">Select...</MenuItem>
-                                            <MenuItem value="Phone">By Phone</MenuItem>
-                                            <MenuItem value="Email">By Email</MenuItem>
-                                            <MenuItem value="Both">Both</MenuItem>
-                                        </Field>
-                                </FormControl>
-                            </Col>
+                            {props.values.agree === false ? (
+                                <Col xs={{size: "4"}} className="my-auto">
+                                    <FormControl className={classes.select} variant="outlined">
+                                        <InputLabel>contact type</InputLabel>
+                                            <Field
+                                                label="contact type"
+                                                name="contactType"
+                                                disabled
+                                                as={Select}
+                                            >
+                                            </Field>
+                                    </FormControl>
+                                </Col>
+                            ) : ( 
+                                <Col xs={{size: "4"}} className="my-auto">
+                                    <FormControl 
+                                        className={classes.select} 
+                                        variant="outlined" 
+                                        error={props.errors.contactType && props.touched.contactType ? true : false}
+                                    >
+                                        <InputLabel>contact type</InputLabel>
+                                            <Field
+                                                label="contact type"
+                                                name="contactType"
+                                                as={Select}
+                                            >
+                                                <MenuItem value="Phone">By Phone</MenuItem>
+                                                <MenuItem value="Email">By Email</MenuItem>
+                                                <MenuItem value="Both">Both</MenuItem>
+                                            </Field>
+                                            {props.errors.contactType && props.touched.contactType ? (
+                                                <FormHelperText>{props.errors.contactType}</FormHelperText>
+                                            ) : (null)
+                                            }
+                                    </FormControl>
+                                </Col>
+                            )}
                         </Row>
                         <Row className="mt-4">
                             <Col xs={{size: "8"}}>
@@ -156,6 +226,12 @@ function Contact() {
                                 >
                                     Submit
                                 </Button>
+                                <TransitionsModal 
+                                    open={open} 
+                                    handleOpen={handleOpen}
+                                    handleClose={handleClose} 
+                                    classes={classes} 
+                                />
                             </Col>
                         </Row>
                         <Row className="mt-5">
