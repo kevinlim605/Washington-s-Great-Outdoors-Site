@@ -160,6 +160,7 @@ function Contact() {
                                 <Field
                                     name="agree"
                                     checked={props.values.agree}
+                                    onClick={() => props.values.contactType = ""}
                                     as={Checkbox}
                                 />
                             </Col>
