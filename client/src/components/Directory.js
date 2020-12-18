@@ -15,12 +15,16 @@ import { Container, Row, Col } from "reactstrap"
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    Width: 345,
+    height: 418,
   },
   media: {
     height: 0,
     paddingTop: '56.25%', 
   },
+  card: {
+    backgroundColor: '#999999',
+  }
 });
 
 function Directory() {
@@ -30,7 +34,7 @@ function Directory() {
   return (
     <Container>
       <div className="mt-4">
-        <h2 className="text-center">Explore!</h2>
+        <h1 className="text-center">Explore!</h1>
       </div>
       <Row className="mt-4">
         <Col xs={{size: "4"}}>
@@ -41,13 +45,14 @@ function Directory() {
                   <MoreVertIcon />
                 </IconButton>
               }
+              className={classes.card}
               title="Hiking"
               subheader="Check out our locations"
             />
             <Link to="/directory/hiking">
               <CardMedia
                 className={classes.media}
-                image="/static/images/cards/paella.jpg"
+                image="/images/hiking.jpg"
               />
             </Link>
             <CardContent>
@@ -73,13 +78,14 @@ function Directory() {
                   <MoreVertIcon />
                 </IconButton>
               }
+              className={classes.card}
               title="Biking"
               subheader="Check out our locations"
             />
             <Link to="/directory/biking">
               <CardMedia
                 className={classes.media}
-                image="/static/images/cards/paella.jpg"
+                image="/images/tigermountainloop.jpg"
               />
             </Link>
             <CardContent>
@@ -105,13 +111,14 @@ function Directory() {
                   <MoreVertIcon />
                 </IconButton>
               }
+              className={classes.card}
               title="Kayaking"
               subheader="Check out our locations"
             />
             <Link to="/directory/kayaking">
               <CardMedia
                 className={classes.media}
-                image="/static/images/cards/paella.jpg"
+                image="/images/pointdoughty.jpg"
               />
             </Link>
             <CardContent>
@@ -139,13 +146,14 @@ function Directory() {
                   <MoreVertIcon />
                 </IconButton>
               }
+              className={classes.card}
               title="Fishing"
               subheader="Check out our locations"
             />
             <Link to="/directory/fishing">
               <CardMedia
                 className={classes.media}
-                image="/static/images/cards/paella.jpg"
+                image="/images/fishing.jpg"
               />
             </Link>
             <CardContent>
@@ -171,13 +179,14 @@ function Directory() {
                   <MoreVertIcon />
                 </IconButton>
               }
+              className={classes.card}
               title="Camping"
               subheader="Check out our locations"
             />
             <Link to="/directory/camping">
               <CardMedia
                 className={classes.media}
-                image="/static/images/cards/paella.jpg"
+                image="/images/greyowlhollow.jpg"
               />
             </Link>
             <CardContent>
@@ -203,6 +212,7 @@ function Directory() {
                   <MoreVertIcon />
                 </IconButton>
               }
+              className={classes.card}
               title="Rock Climbing"
               subheader="Check out our locations"
             />
