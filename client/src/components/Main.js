@@ -20,7 +20,7 @@ class Main extends Component {
         return(
             <Fragment>
                 <Header />
-                <div class="main">
+                <div className="main">
                     <Switch>
                         <Route path="/home">
                             <Home />
