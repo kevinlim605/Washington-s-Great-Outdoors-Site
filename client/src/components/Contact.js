@@ -28,7 +28,6 @@ const validationSchema = yup.object({
     lastName: yup.string().required('Required!').min(2, 'Too Short!').max(50, 'Too Long!'),
     email: yup.string().email('Invalid Email!').required('Required'),
     telNum: yup.string().matches(phoneRegex, 'Invalid Phone Number').required('Required!'),
-    contactType: yup.string().required('Required!'),
     feedback: yup.string().required('Required!')
 })
 
@@ -182,7 +181,7 @@ function Contact() {
                                     <FormControl 
                                         className={classes.select} 
                                         variant="outlined" 
-                                        error={props.errors.contactType && props.touched.contactType ? true : false}
+                                        error={!props.values.contactType && props.touched.contactType ? true : false}
                                     >
                                         <InputLabel>contact type</InputLabel>
                                             <Field
@@ -194,8 +193,8 @@ function Contact() {
                                                 <MenuItem value="Email">By Email</MenuItem>
                                                 <MenuItem value="Both">Both</MenuItem>
                                             </Field>
-                                            {props.errors.contactType && props.touched.contactType ? (
-                                                <FormHelperText>{props.errors.contactType}</FormHelperText>
+                                            {!props.values.contactType && props.touched.contactType ? (
+                                                <FormHelperText>Required!</FormHelperText>
                                             ) : (null)
                                             }
                                     </FormControl>

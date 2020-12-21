@@ -10,7 +10,7 @@ import Biking from "./Biking";
 import Kayaking from "./Kayaking";
 import Fishing from "./Fishing";
 import Camping from "./Camping";
-import RockClimbing from "./RockClimbing";
+import Climbing from "./Climbing";
 import Favorites from "./Favorites";
 import Contact from "./Contact";
 
@@ -46,8 +46,8 @@ class Main extends Component {
                         <Route path="/directory/camping">
                             <Camping />
                         </Route>
-                        <Route path="/directory/rockclimbing">
-                            <RockClimbing />
+                        <Route path="/directory/climbing">
+                            <Climbing />
                         </Route>
                         <Route exact path="/favorites">
                             <Favorites />

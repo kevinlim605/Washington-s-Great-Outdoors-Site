@@ -213,13 +213,13 @@ function Directory() {
                 </IconButton>
               }
               className={classes.card}
-              title="Rock Climbing"
+              title="Climbing"
               subheader="Check out our locations"
             />
-            <Link to="/directory/rockclimbing">
+            <Link to="/directory/climbing">
               <CardMedia
                 className={classes.media}
-                image="/static/images/cards/paella.jpg"
+                image="/images/climbing.jpg"
               />
             </Link>
             <CardContent>
