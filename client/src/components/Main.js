@@ -1,5 +1,6 @@
 import React, { Component, Fragment} from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect, withRouter } from "react-router-dom";
+import { connect } from "react-redux";
 import Header from "./Header";
 import Footer from "./Footer";
 import Home from "./Home";
@@ -13,6 +14,12 @@ import Camping from "./Camping";
 import Climbing from "./Climbing";
 import Favorites from "./Favorites";
 import Contact from "./Contact";
+
+const mapStateToProps = (state) => {
+    return {
+        activities: state.activities,
+    }
+};
 
 class Main extends Component {
 
@@ -29,7 +36,7 @@ class Main extends Component {
                             <About />
                         </Route>
                         <Route exact path="/directory">
-                            <Directory />
+                            <Directory activities={this.props.activities}/>
                         </Route>
                         <Route path="/directory/hiking">
                             <Hiking />
@@ -64,4 +71,4 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default withRouter(connect(mapStateToProps)(Main));

@@ -27,216 +27,70 @@ const useStyles = makeStyles({
   }
 });
 
-function Directory() {
+function RenderDirectoryCard (props) {
+  return (
+      <Col xs={{size: "4"}}>
+        <Card className={props.classes.root}>
+          <CardHeader
+            action={
+              <IconButton aria-label="settings">
+                <MoreVertIcon />
+              </IconButton>
+            }
+            className={props.classes.card}
+            title={props.activity.name}
+            subheader="Check out our locations"
+          />
+          <Link to="/directory/hiking">
+            <CardMedia
+              className={props.classes.media}
+              image={props.activity.image}
+            />
+          </Link>
+          <CardContent>
+            <Typography variant="body2" color="textSecondary" component="p">
+                {props.activity.description}
+            </Typography>
+          </CardContent>
+          <CardActions disableSpacing>
+            <IconButton aria-label="add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+            <IconButton aria-label="share">
+              <ShareIcon />
+            </IconButton>
+          </CardActions>
+        </Card>
+      </Col>
+  );
+}
 
+
+function Directory(props) {
+  
   const classes = useStyles();
 
+  const row1 = [];
+  const row2 = [];
+
+  for (let i = 0; i < 3; i++) {
+    row1.push(<RenderDirectoryCard classes={classes} activity={props.activities[i]}/>)
+  }
+
+  for (let i = 3; i < 6; i++) {
+    row2.push(<RenderDirectoryCard classes={classes} activity={props.activities[i]}/>)
+  }
+  
   return (
     <Container>
       <div className="mt-4">
         <h1 className="text-center">Explore!</h1>
       </div>
       <Row className="mt-4">
-        <Col xs={{size: "4"}}>
-          <Card className={classes.root}>
-            <CardHeader
-              action={
-                <IconButton aria-label="settings">
-                  <MoreVertIcon />
-                </IconButton>
-              }
-              className={classes.card}
-              title="Hiking"
-              subheader="Check out our locations"
-            />
-            <Link to="/directory/hiking">
-              <CardMedia
-                className={classes.media}
-                image="/images/hiking.jpg"
-              />
-            </Link>
-            <CardContent>
-              <Typography variant="body2" color="textSecondary" component="p">
-                  Hike across mountainous, scenic trails found abundant throughout the pacific northwest.
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <ShareIcon />
-              </IconButton>
-            </CardActions>
-          </Card>
-        </Col>
-        <Col xs={{size: "4"}}>
-          <Card className={classes.root}>
-            <CardHeader
-              action={
-                <IconButton aria-label="settings">
-                  <MoreVertIcon />
-                </IconButton>
-              }
-              className={classes.card}
-              title="Biking"
-              subheader="Check out our locations"
-            />
-            <Link to="/directory/biking">
-              <CardMedia
-                className={classes.media}
-                image="/images/tigermountainloop.jpg"
-              />
-            </Link>
-            <CardContent>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Bring your bike and check out these perfect trails for the everyday cyclist.
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <ShareIcon />
-              </IconButton>
-            </CardActions>
-          </Card>
-        </Col>
-        <Col xs={{size: "4"}}>
-          <Card className={classes.root}>
-            <CardHeader
-              action={
-                <IconButton aria-label="settings">
-                  <MoreVertIcon />
-                </IconButton>
-              }
-              className={classes.card}
-              title="Kayaking"
-              subheader="Check out our locations"
-            />
-            <Link to="/directory/kayaking">
-              <CardMedia
-                className={classes.media}
-                image="/images/pointdoughty.jpg"
-              />
-            </Link>
-            <CardContent>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Feel the rush of taking on some of Washington's river rapids and great rivers.
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <ShareIcon />
-              </IconButton>
-            </CardActions>
-          </Card>
-        </Col>
+        {row1}
       </Row>
       <Row className="mt-4">
-        <Col xs={{size: "4"}}>
-          <Card className={classes.root}>
-            <CardHeader
-              action={
-                <IconButton aria-label="settings">
-                  <MoreVertIcon />
-                </IconButton>
-              }
-              className={classes.card}
-              title="Fishing"
-              subheader="Check out our locations"
-            />
-            <Link to="/directory/fishing">
-              <CardMedia
-                className={classes.media}
-                image="/images/fishing.jpg"
-              />
-            </Link>
-            <CardContent>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Catch all types of abundant fish, ranging from salmon to trout to even squid!
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <ShareIcon />
-              </IconButton>
-            </CardActions>
-          </Card>
-        </Col>
-        <Col xs={{size: "4"}}>
-          <Card className={classes.root}>
-            <CardHeader
-              action={
-                <IconButton aria-label="settings">
-                  <MoreVertIcon />
-                </IconButton>
-              }
-              className={classes.card}
-              title="Camping"
-              subheader="Check out our locations"
-            />
-            <Link to="/directory/camping">
-              <CardMedia
-                className={classes.media}
-                image="/images/greyowlhollow.jpg"
-              />
-            </Link>
-            <CardContent>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Step away from the comfort of your home and into the comfort of mother nature.
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <ShareIcon />
-              </IconButton>
-            </CardActions>
-          </Card>
-        </Col>
-        <Col xs={{size: "4"}}>
-          <Card className={classes.root}>
-            <CardHeader
-              action={
-                <IconButton aria-label="settings">
-                  <MoreVertIcon />
-                </IconButton>
-              }
-              className={classes.card}
-              title="Climbing"
-              subheader="Check out our locations"
-            />
-            <Link to="/directory/climbing">
-              <CardMedia
-                className={classes.media}
-                image="/images/climbing.jpg"
-              />
-            </Link>
-            <CardContent>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Take the challenge! Check out these awesome spots for testing your skills.
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <ShareIcon />
-              </IconButton>
-            </CardActions>
-          </Card>
-        </Col>
+        {row2}
       </Row>
     </Container>
   );

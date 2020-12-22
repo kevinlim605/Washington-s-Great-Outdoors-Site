@@ -1,13 +1,19 @@
 import React from 'react';
-import { BrowserRouter} from 'react-router-dom';
 import Main from "./components/Main";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { ConfigureStore } from "./redux/configureStore";
 import './App.scss';
+
+const store = ConfigureStore();
 
 function App() {
   return (
-    <BrowserRouter>
-      <Main />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Main />
+      </BrowserRouter>
+    </Provider>
   );
 }
 
