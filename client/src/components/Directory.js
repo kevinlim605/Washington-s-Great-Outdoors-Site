@@ -41,7 +41,7 @@ function RenderDirectoryCard (props) {
             title={props.activity.name}
             subheader="Check out our locations"
           />
-          <Link to={`/directory/${props.activity.name}`}>
+          <Link to={`/directory/${props.activity.name.toLowerCase()}`}>
             <CardMedia
               className={props.classes.media}
               image={props.activity.image}

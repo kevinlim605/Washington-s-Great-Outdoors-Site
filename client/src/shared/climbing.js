@@ -17,7 +17,7 @@ export const CLIMBING = [
         id: 2,
         name: "Mount Baker",
         descriptor: "Climbing Style: Ice climbing, Glacier Climbing",
-        description: "Rising to 10,781feet with a nearly 9,000 feet prominence from sea level, MountBaker demands to be climbed. When viewed from nearby Bellingham, her relief is dramatic! For those wishing to climb Baker, it would be wise to know that after Mount Rainier to the south, Baker is the most glaciated mountain in the lower 48. Indigenous peoples called the mountain Kulshan before white settlers renamed the geological wonder. Kulshan is translated into a multitude of names including “white sentinel,” “puncture wound,” and “crater.”",
+        description: "Rising to 10,781feet with a nearly 9,000 feet prominence from sea level, Mount Baker demands to be climbed. When viewed from nearby Bellingham, her relief is dramatic! For those wishing to climb Baker, it would be wise to know that after Mount Rainier to the south, Baker is the most glaciated mountain in the lower 48. Indigenous peoples called the mountain Kulshan before white settlers renamed the geological wonder. Kulshan is translated into a multitude of names including “white sentinel,” “puncture wound,” and “crater.”",
         image: "/images/mountbaker.jpg", 
     },
     {

@@ -6,24 +6,26 @@ import Footer from "./Footer";
 import Home from "./Home";
 import About from "./About";
 import Directory from "./Directory";
-import Hiking from "./Hiking";
-import Biking from "./Biking";
-import Kayaking from "./Kayaking";
-import Fishing from "./Fishing";
-import Camping from "./Camping";
-import Climbing from "./Climbing";
+import ActivityInfo from "./ActivityInfo";
 import Favorites from "./Favorites";
 import Contact from "./Contact";
 
 const mapStateToProps = (state) => {
     return {
         activities: state.activities,
+        hiking: state.hiking,
+        biking: state.biking,
+        kayaking: state.kayaking,
+        fishing: state.fishing,
+        camping: state.camping,
+        climbing: state.climbing,
     }
 };
 
 class Main extends Component {
 
     render() {
+
         return(
             <Fragment>
                 <Header />
@@ -39,22 +41,22 @@ class Main extends Component {
                             <Directory activities={this.props.activities}/>
                         </Route>
                         <Route path="/directory/hiking">
-                            <Hiking />
+                            <ActivityInfo activity={this.props.hiking}/>
                         </Route>
                         <Route path="/directory/biking">
-                            <Biking />
+                            <ActivityInfo activity={this.props.biking}/>
                         </Route>
                         <Route path="/directory/kayaking">
-                            <Kayaking />
+                            <ActivityInfo activity={this.props.kayaking}/>
                         </Route>
                         <Route path="/directory/fishing">
-                            <Fishing />
+                            <ActivityInfo activity={this.props.fishing}/>
                         </Route>
                         <Route path="/directory/camping">
-                            <Camping />
+                            <ActivityInfo activity={this.props.camping}/>
                         </Route>
                         <Route path="/directory/climbing">
-                            <Climbing />
+                            <ActivityInfo activity={this.props.climbing}/>
                         </Route>
                         <Route exact path="/favorites">
                             <Favorites />
