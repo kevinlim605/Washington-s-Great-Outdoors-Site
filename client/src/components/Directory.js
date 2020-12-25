@@ -83,10 +83,10 @@ function Directory(props) {
   
   return (
     <Container>
-      <div className="mt-4">
+      <div className="mt-5">
         <h1 className="text-center">Explore!</h1>
       </div>
-      <Row className="mt-4">
+      <Row className="mt-5">
         {row1}
       </Row>
       <Row className="mt-4">

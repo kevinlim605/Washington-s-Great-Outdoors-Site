@@ -71,7 +71,7 @@ function Contact() {
 
     return( 
         <Container>
-            <Row className="mb-4 mt-4">
+            <Row className="mb-4 mt-5">
                 <Col>
                     <h1>Contact Us</h1>
                     <hr/>
@@ -234,7 +234,7 @@ function Contact() {
                                 />
                             </Col>
                         </Row>
-                        <Row className="mt-5">
+                        {/* <Row className="mt-5">
                             <Col>
                                 <pre>
                                     {JSON.stringify(props.values, null, 2)}
@@ -243,7 +243,7 @@ function Contact() {
                                     {JSON.stringify(props.errors, null, 2)}
                                 </pre>
                             </Col>
-                        </Row>
+                        </Row> */}
                     </Form>
                 )}
             </Formik>

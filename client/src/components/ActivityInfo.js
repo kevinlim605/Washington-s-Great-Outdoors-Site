@@ -5,9 +5,14 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 function ActivityInfo(props) {
     return(
         <Container>
+            <Row className="mt-5 text-center">
+                <Col>
+                    <h1>Check Out These Locations!</h1>
+                </Col>
+            </Row>
             {props.activity.map(activity => {
                 return (
-                    <Row className="mt-4">
+                    <Row className="mt-5">
                         <Col xs={{ size: "5" }}>
                             <img 
                                 src={activity.image}
