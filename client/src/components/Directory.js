@@ -15,8 +15,7 @@ import { Container, Row, Col } from "reactstrap"
 
 const useStyles = makeStyles({
   root: {
-    Width: 345,
-    height: 418,
+    height: "430px"
   },
   media: {
     height: 0,
@@ -29,7 +28,7 @@ const useStyles = makeStyles({
 
 function RenderDirectoryCard (props) {
   return (
-      <Col xs={{size: "4"}}>
+      <Col xs={{ size: "8" }} sm={{ size: "6"}} lg={{size: "4"}} className="mt-4 mx-auto">
         <Card className={props.classes.root}>
           <CardHeader
             action={
@@ -69,28 +68,18 @@ function RenderDirectoryCard (props) {
 function Directory(props) {
   
   const classes = useStyles();
-
-  const row1 = [];
-  const row2 = [];
-
-  for (let i = 0; i < 3; i++) {
-    row1.push(<RenderDirectoryCard classes={classes} activity={props.activities[i]}/>)
-  }
-
-  for (let i = 3; i < 6; i++) {
-    row2.push(<RenderDirectoryCard classes={classes} activity={props.activities[i]}/>)
-  }
   
   return (
     <Container>
       <div className="mt-5">
         <h1 className="text-center">Explore!</h1>
       </div>
-      <Row className="mt-5">
-        {row1}
-      </Row>
-      <Row className="mt-4">
-        {row2}
+      <Row>
+        {props.activities.map(activity => {
+          return (
+            <RenderDirectoryCard classes={classes} activity={activity}/>
+          )
+        })}
       </Row>
     </Container>
   );

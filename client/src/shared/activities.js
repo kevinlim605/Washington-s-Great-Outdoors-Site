@@ -8,7 +8,7 @@ export const ACTIVITIES = [
     {
         id: 1,
         name: "Biking",
-        description: "Bring your bike and check out these perfect trails for the everyday cyclist.",
+        description: "Bring your bike and check out these perfect trails for the everyday cyclist to challenge.",
         image: "/images/biking.jpg",
     },
     {
@@ -20,19 +20,19 @@ export const ACTIVITIES = [
     {
         id: 3,
         name: "Fishing",
-        description: "Catch all types of abundant fish, ranging from salmon to trout to even squid!",
+        description: "fish all types of abundant, seasonal catch, ranging from salmon to trout to even squid!",
         image: "/images/fishing.jpg",
     },
     {
         id: 4,
         name: "Camping",
-        description: "Step away from the comfort of your home and into the comfort of mother nature.",
+        description: "Step away from the comfort of your home. Surround yourself in the arms of mother nature.",
         image: "/images/camping.jpg",
     },
     {
         id: 5,
         name: "Climbing",
-        description: "Take the challenge! Check out these awesome spots for testing your skills.",
+        description: "Take the ultimate challenge! Explore these fantastic cliff sides and test your skills!",
         image: "/images/climbing.jpg",
     },
 ]
