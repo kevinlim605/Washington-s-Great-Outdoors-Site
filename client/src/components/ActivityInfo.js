@@ -13,18 +13,20 @@ function ActivityInfo(props) {
             {props.activity.map(activity => {
                 return (
                     <Row className="mt-5">
-                        <Col xs={{ size: "5" }}>
+                        <Col sm={{ size: "12" }} lg={{ size: "6"}} className="mb-3 d-flex justify-content-center">
                             <img 
                                 src={activity.image}
                                 alt="loc 1"
-                                className="rounded float-left"
+                                className="rounded"
                             />
                         </Col>
-                        <Col xs={{ size: "6" }}>
-                            <h4>{activity.name}</h4>
-                            <p><b>{activity.descriptor}</b></p>
-                            <p><b>Description: {activity.description}</b></p>
-                            <FavoriteBorderIcon fontSize="large"/>
+                        <Col sm={{ size: "9" }} lg={{ size: "6"}} className="mx-auto"> 
+                            <h4 className="text-center text-lg-left">{activity.name}</h4>
+                            <p className="text-center text-lg-left"><b>{activity.descriptor}</b></p>
+                            <p className="text-center text-lg-left"><b>Description: {activity.description}</b></p>
+                            <div className="text-center text-lg-left">
+                                <FavoriteBorderIcon fontSize="large"/>
+                            </div>
                         </Col>
                     </Row>
                 );
