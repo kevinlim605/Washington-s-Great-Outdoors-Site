@@ -20,11 +20,11 @@ function ActivityInfo(props) {
                                 className="rounded"
                             />
                         </Col>
-                        <Col sm={{ size: "9" }} lg={{ size: "6"}} className="mx-auto"> 
-                            <h4 className="text-center text-lg-left">{activity.name}</h4>
-                            <p className="text-center text-lg-left"><b>{activity.descriptor}</b></p>
-                            <p className="text-center text-lg-left"><b>Description: {activity.description}</b></p>
-                            <div className="text-center text-lg-left">
+                        <Col sm={{ size: "9" }} lg={{ size: "6"}} className="mx-auto text-center text-lg-left"> 
+                            <h4>{activity.name}</h4>
+                            <p><b>{activity.descriptor}</b></p>
+                            <p><b>Description: {activity.description}</b></p>
+                            <div>
                                 <FavoriteBorderIcon fontSize="large"/>
                             </div>
                         </Col>

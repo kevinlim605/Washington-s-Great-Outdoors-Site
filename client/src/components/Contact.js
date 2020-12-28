@@ -100,7 +100,7 @@ function Contact() {
                 {(props) => (
                     <Form>
                         <Row>
-                            <Col xs={{size: "4"}}>
+                            <Col xs={{size: "10"}} md={{size: "4"}} className="mb-4">
                                 <Field
                                     name="firstName"
                                     value={props.values.firstName}
@@ -112,7 +112,7 @@ function Contact() {
                                     as={TextField}
                                 />
                             </Col>
-                            <Col xs={{size: "4"}}>
+                            <Col xs={{size: "10"}} md={{size: "4"}} className="mb-4">
                                 <Field
                                     name="lastName"
                                     value={props.values.lastName}
@@ -125,8 +125,8 @@ function Contact() {
                                 />
                             </Col>
                         </Row>
-                        <Row className="mt-4">
-                            <Col xs={{size: "8"}}>
+                        <Row className="mt-2">
+                            <Col xs={{size: "10"}} md={{size: "8"}}>
                                 <Field
                                     name="email"
                                     value={props.values.email}
@@ -140,7 +140,7 @@ function Contact() {
                             </Col>
                         </Row>
                         <Row className="mt-4">
-                            <Col xs={{size: "8"}}>
+                            <Col xs={{size: "10"}} md={{size: "8"}}>
                                 <Field
                                     name="telNum"
                                     value={props.values.telNum}
@@ -154,7 +154,7 @@ function Contact() {
                             </Col>
                         </Row>
                         <Row className="mt-4">
-                            <Col xs={{size: "4"}}>
+                            <Col xs={{size: "10"}} md={{size: "4"}} className="mb-3">
                                 <Label>May We Contact You?</Label>
                                 <Field
                                     name="agree"
@@ -164,7 +164,7 @@ function Contact() {
                                 />
                             </Col>
                             {props.values.agree === false ? (
-                                <Col xs={{size: "4"}} className="my-auto">
+                                <Col xs={{size: "10"}} md={{size: "4"}} className="my-auto">
                                     <FormControl className={classes.select} variant="outlined">
                                         <InputLabel>contact type</InputLabel>
                                             <Field
@@ -177,7 +177,7 @@ function Contact() {
                                     </FormControl>
                                 </Col>
                             ) : ( 
-                                <Col xs={{size: "4"}} className="my-auto">
+                                <Col xs={{size: "10"}} md={{size: "4"}} className="my-auto">
                                     <FormControl 
                                         className={classes.select} 
                                         variant="outlined" 
@@ -202,7 +202,7 @@ function Contact() {
                             )}
                         </Row>
                         <Row className="mt-4">
-                            <Col xs={{size: "8"}}>
+                            <Col xs={{size: "10"}} md={{size: "8"}}>
                                 <Field
                                     name="feedback"
                                     value={props.values.feedback}
@@ -212,7 +212,7 @@ function Contact() {
                                     variant="outlined"
                                     fullWidth
                                     multiline="true"
-                                    rows="8"
+                                    rows="10"
                                     as={TextField}
                                 />
                             </Col>
