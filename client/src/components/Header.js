@@ -1,8 +1,46 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Jumbotron, Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
-import { AppBar, Toolbar, IconButton, Typography, Button, makeStyles, Menu, MenuItem } from "@material-ui/core";
+import { AppBar, Toolbar, IconButton, Typography, Button, makeStyles } from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
+import styled from "styled-components";
+import { SidebarData } from "../shared/sidebarData";
+import SubMenu from './SubMenu';
+
+const Nav = styled.div`
+    background: #15171c;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+`
+
+const NavIcon = styled(Link)`
+    margin-left: 2rem;
+    font-size: 2rem;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+`
+
+const SidebarNav = styled(Nav)`
+    background: #15171c;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: ${({ sidebar }) => ( sidebar ? '0' : '-100%' )};
+    transition: 350ms;
+    z-index: 10;
+`
+
+const SidebarWrap = styled.div`
+    width: 100%;
+`
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,14 +58,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Header() {
-    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const [ anchorEl, setAnchorEl ] = useState(null);
+    const [ sidebar, setSidebar ] = useState(false);
+
+    const showSidebar = () => {
+        setSidebar(!sidebar);
+    }
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
-    };
-
-    const handleClose = () => {
-        setAnchorEl(null);
     };
 
     const classes = useStyles();
@@ -54,41 +94,18 @@ function Header() {
                         color="inherit"
                         onClick={handleClick} 
                         aria-label="menu">
-                        <MenuIcon />
+                        <MenuIcon onClick={showSidebar}/>
                     </IconButton>
-                    <Menu
-                        id="simple-menu"
-                        anchorEl={anchorEl}
-                        keepMounted
-                        open={Boolean(anchorEl)}
-                        onClose={handleClose}
-                    >
-                        <MenuItem onClick={handleClose}>
-                            <Link to="./home" style={{color: "inherit", textDecoration: "none"}}>
-                                Home
-                            </Link>
-                        </MenuItem>
-                        <MenuItem onClick={handleClose}>
-                            <Link to="./about" style={{color: "inherit", textDecoration: "none"}}>
-                                About
-                            </Link>
-                        </MenuItem>
-                        <MenuItem onClick={handleClose}>
-                            <Link to="./directory" style={{color: "inherit", textDecoration: "none"}}>
-                                Directory
-                            </Link>
-                        </MenuItem>
-                        <MenuItem onClick={handleClose}>
-                            <Link to="./favorites" style={{color: "inherit", textDecoration: "none"}}>
-                                Favorites
-                            </Link>
-                        </MenuItem>                        
-                        <MenuItem onClick={handleClose}>
-                            <Link to="./contact" style={{color: "inherit", textDecoration: "none"}}>
-                                Contact
-                            </Link>
-                        </MenuItem>                    
-                    </Menu>
+                    <SidebarNav sidebar={sidebar}>
+                        <SidebarWrap>
+                            <NavIcon to="#">
+                                <CloseIcon onClick={showSidebar}/>
+                            </NavIcon>
+                            {SidebarData.map((item, index) => {
+                                return <SubMenu item={item} key={index} />
+                            })}
+                        </SidebarWrap>
+                    </SidebarNav>
                     <Typography className={classes.title} variant="h6">
                         Menu
                     </Typography>

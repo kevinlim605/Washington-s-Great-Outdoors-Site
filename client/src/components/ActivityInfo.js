@@ -12,7 +12,7 @@ function ActivityInfo(props) {
             </Row>
             {props.activity.map(activity => {
                 return (
-                    <Row className="mt-5">
+                    <Row className="mt-5 align-items-sm-center align-items-lg-start">
                         <Col sm={{ size: "12" }} lg={{ size: "6"}} className="mb-3 d-flex justify-content-center">
                             <img 
                                 src={activity.image}
