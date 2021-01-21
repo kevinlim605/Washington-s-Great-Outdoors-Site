@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, withTheme } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import { Container, Row, Col } from "reactstrap";
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -22,10 +22,10 @@ function Footer() {
             <Container>
                 <Row>
                     <Col className="text-center">
-                        <a href="#"><InstagramIcon fontSize="large" className={classes.icon}/></a>
-                        <a href="#"><FacebookIcon fontSize="large" className={classes.icon}/></a>
-                        <a href="#"><TwitterIcon fontSize="large" className={classes.icon}/></a>
-                        <a href="#"><YouTubeIcon fontSize="large" className={classes.icon}/></a>
+                        <a href="https://instagram.com"><InstagramIcon fontSize="large" className={classes.icon}/></a>
+                        <a href="https://facebook.com"><FacebookIcon fontSize="large" className={classes.icon}/></a>
+                        <a href="https://twitter.com"><TwitterIcon fontSize="large" className={classes.icon}/></a>
+                        <a href="https://youtube.com"><YouTubeIcon fontSize="large" className={classes.icon}/></a>
                     </Col>
                 </Row>
             </Container>

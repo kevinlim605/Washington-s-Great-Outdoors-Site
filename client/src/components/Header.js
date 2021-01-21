@@ -3,44 +3,44 @@ import { Jumbotron, Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import { AppBar, Toolbar, IconButton, Typography, Button, makeStyles } from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
-import CloseIcon from '@material-ui/icons/Close';
 import styled from "styled-components";
 import { SidebarData } from "../shared/sidebarData";
 import SubMenu from './SubMenu';
 
 const Nav = styled.div`
-    background: #15171c;
-    height: 80px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-`
+  background: #15171c;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
 
 const NavIcon = styled(Link)`
-    margin-left: 2rem;
-    font-size: 2rem;
-    height: 80px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-`
+  color: white;
+  margin-left: 21px;
+  font-size: 2rem;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
 
-const SidebarNav = styled(Nav)`
-    background: #15171c;
-    width: 250px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: ${({ sidebar }) => ( sidebar ? '0' : '-100%' )};
-    transition: 350ms;
-    z-index: 10;
-`
+const SidebarNav = styled.nav`
+  background: #15171c;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
+  transition: 350ms;
+  z-index: 10;
+`;
 
 const SidebarWrap = styled.div`
-    width: 100%;
-`
+  width: 100%;
+`;
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -99,10 +99,14 @@ function Header() {
                     <SidebarNav sidebar={sidebar}>
                         <SidebarWrap>
                             <NavIcon to="#">
-                                <CloseIcon onClick={showSidebar}/>
+                                <MenuIcon onClick={showSidebar} />
                             </NavIcon>
                             {SidebarData.map((item, index) => {
-                                return <SubMenu item={item} key={index} />
+                                return (
+                                    <div onClick={showSidebar}>
+                                        <SubMenu item={item} key={index} />
+                                    </div>
+                                )
                             })}
                         </SidebarWrap>
                     </SidebarNav>

@@ -21,12 +21,9 @@ function ActivityInfo(props) {
                             />
                         </Col>
                         <Col sm={{ size: "9" }} lg={{ size: "6"}} className="mx-auto text-center text-lg-left"> 
-                            <h4>{activity.name}</h4>
+                            <h4>{activity.location} <FavoriteBorderIcon fontSize="large"/></h4>
                             <p><b>{activity.descriptor}</b></p>
                             <p><b>Description: {activity.description}</b></p>
-                            <div>
-                                <FavoriteBorderIcon fontSize="large"/>
-                            </div>
                         </Col>
                     </Row>
                 );
