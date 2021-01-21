@@ -6,6 +6,30 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+// My Work
+const hikingRouter = require('./routes/hikingRouter');
+const bikingRouter = require('./routes/bikingRouter');
+const kayakingRouter = require('./routes/kayakingRouter');
+const fishingRouter = require('./routes/fishingRouter');
+const campingRouter = require('./routes/campingRouter');
+const climbingRouter = require('./routes/climbingRouter');
+
+// My Work
+const mongoose = require('mongoose');
+
+// My Work
+const url = 'mongodb://localhost:27017/wgod';
+const connect = mongoose.connect(url, {
+  useCreateIndex: true,
+  useFindAndModify: false,
+  useNewUrlParser: true, 
+  useUnifiedTopology: true
+});
+
+// My Work
+connect.then(() => console.log('Connected correctly to server'),
+  err => console.log(err)
+);
 
 var app = express();
 
@@ -21,6 +45,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+// My Work
+app.use('/hiking', hikingRouter);
+app.use('/biking', bikingRouter);
+app.use('/kayaking', kayakingRouter);
+app.use('/fishing', fishingRouter);
+app.use('/camping', campingRouter);
+app.use('/climbing', climbingRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
