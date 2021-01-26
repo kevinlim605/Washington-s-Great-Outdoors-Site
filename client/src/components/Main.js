@@ -9,20 +9,29 @@ import Directory from "./Directory";
 import ActivityInfo from "./ActivityInfo";
 import Favorites from "./Favorites";
 import Contact from "./Contact";
+import { fetchActivities } from "../redux/ActionCreator";
 
 const mapStateToProps = (state) => {
     return {
         activities: state.activities,
-        hiking: state.hiking,
-        biking: state.biking,
-        kayaking: state.kayaking,
-        fishing: state.fishing,
-        camping: state.camping,
-        climbing: state.climbing,
+        // hiking: state.hiking,
+        // biking: state.biking,
+        // kayaking: state.kayaking,
+        // fishing: state.fishing,
+        // camping: state.camping,
+        // climbing: state.climbing,
     }
 };
 
+const mapDispatchToProps = {
+    fetchActivities: () => fetchActivities(),
+};
+
 class Main extends Component {
+
+    componentDidMount() {
+        this.props.fetchActivities();
+    }
 
     render() {
 
@@ -38,9 +47,9 @@ class Main extends Component {
                             <About />
                         </Route>
                         <Route exact path="/directory">
-                            <Directory activities={this.props.activities}/>
+                            <Directory activities={this.props.activities.activities}/>
                         </Route>
-                        <Route path="/directory/hiking">
+                        {/* <Route path="/directory/hiking">
                             <ActivityInfo activity={this.props.hiking}/>
                         </Route>
                         <Route path="/directory/biking">
@@ -57,7 +66,7 @@ class Main extends Component {
                         </Route>
                         <Route path="/directory/climbing">
                             <ActivityInfo activity={this.props.climbing}/>
-                        </Route>
+                        </Route> */}
                         <Route exact path="/favorites">
                             <Favorites />
                         </Route>
@@ -73,4 +82,4 @@ class Main extends Component {
     }
 }
 
-export default withRouter(connect(mapStateToProps)(Main));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));

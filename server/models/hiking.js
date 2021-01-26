@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const hikingLocationSchema = new Schema({
     id: {
         type: Number,
-        required: true
+        required: true,
+        unique: true,
     },
     location: {
         type: String,
@@ -23,6 +24,8 @@ const hikingLocationSchema = new Schema({
         type: String,
         required: true
     }
+}, {
+    timestamps: true
 });
 
 const HikingLocation = mongoose.model('HikingLocation', hikingLocationSchema);

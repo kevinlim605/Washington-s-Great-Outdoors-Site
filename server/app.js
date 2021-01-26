@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 // My Work
+const directoryRouter = require('./routes/directoryRouter');
 const hikingRouter = require('./routes/hikingRouter');
 const bikingRouter = require('./routes/bikingRouter');
 const kayakingRouter = require('./routes/kayakingRouter');
@@ -46,6 +47,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 // My Work
+app.use('/directory', directoryRouter);
 app.use('/hiking', hikingRouter);
 app.use('/biking', bikingRouter);
 app.use('/kayaking', kayakingRouter);
