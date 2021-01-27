@@ -1,40 +1,43 @@
 const express = require('express');
 const ClimbingLocation = require('../models/climbing');
+const cors = require('./cors');
 
 const climbingRouter = express.Router();
 
-climbingRouter.route('/')
-.get((req, res, next) => {
+climbingRouter
+  .route('/')
+  .options(cors.corsWithOptions, (req, res) => res.sendStatus(200))
+  .get(cors.cors, (req, res, next) => {
     ClimbingLocation.find()
-    .then(climbinginfo => {
+      .then((climbinginfo) => {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.json(climbinginfo);
-    })
-    .catch(err => next());
-})
-.post((req, res, next) => {
+      })
+      .catch((err) => next());
+  })
+  .post((req, res, next) => {
     ClimbingLocation.create(req.body)
-    .then(climbinginfo => {
+      .then((climbinginfo) => {
         console.log('Climbing Document Created ', climbinginfo);
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.json(climbinginfo);
-    })
-    .catch(err => next(err));
-})
-.put((req, res) => {
+      })
+      .catch((err) => next(err));
+  })
+  .put((req, res) => {
     res.statusCode = 403;
     res.end('PUT operation not supported on /climbing');
-})
-.delete((req, res, next) => {
+  })
+  .delete((req, res, next) => {
     ClimbingLocation.deleteMany()
-    .then(response => {
+      .then((response) => {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.json(response);
-    })
-    .catch(err => next(err));
-});
+      })
+      .catch((err) => next(err));
+  });
 
 module.exports = climbingRouter;

@@ -1,10 +1,12 @@
 const express = require('express');
 const Directory = require('../models/directory');
+const cors = require('./cors');
 
 const directoryRouter = express.Router();
 
 directoryRouter.route('/')
-.get((req, res, next) => {
+.options(cors.corsWithOptions, (req, res) => res.sendStatus(200))
+.get(cors.cors, (req, res, next) => {
     Directory.find()
     .then(directoryinfo => {
         res.statusCode = 200;

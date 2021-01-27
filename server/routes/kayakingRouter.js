@@ -1,40 +1,43 @@
 const express = require('express');
 const KayakingLocation = require('../models/kayaking');
+const cors = require('./cors');
 
 const kayakingRouter = express.Router();
 
-kayakingRouter.route('/')
-.get((req, res, next) => {
+kayakingRouter
+  .route('/')
+  .options(cors.corsWithOptions, (req, res) => res.sendStatus(200))
+  .get(cors.cors, (req, res, next) => {
     KayakingLocation.find()
-    .then(kayakinginfo => {
+      .then((kayakinginfo) => {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.json(kayakinginfo);
-    })
-    .catch(err => next());
-})
-.post((req, res, next) => {
+      })
+      .catch((err) => next());
+  })
+  .post((req, res, next) => {
     KayakingLocation.create(req.body)
-    .then(kayakinginfo => {
+      .then((kayakinginfo) => {
         console.log('Kayaking Document Created ', kayakinginfo);
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.json(kayakinginfo);
-    })
-    .catch(err => next(err));
-})
-.put((req, res) => {
+      })
+      .catch((err) => next(err));
+  })
+  .put((req, res) => {
     res.statusCode = 403;
     res.end('PUT operation not supported on /kayaking');
-})
-.delete((req, res, next) => {
+  })
+  .delete((req, res, next) => {
     KayakingLocation.deleteMany()
-    .then(response => {
+      .then((response) => {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.json(response);
-    })
-    .catch(err => next(err));
-});
+      })
+      .catch((err) => next(err));
+  });
 
 module.exports = kayakingRouter;

@@ -1,40 +1,43 @@
 const express = require('express');
 const FishingLocation = require('../models/fishing');
+const cors = require('./cors');
 
 const fishingRouter = express.Router();
 
-fishingRouter.route('/')
-.get((req, res, next) => {
+fishingRouter
+  .route('/')
+  .options(cors.corsWithOptions, (req, res) => res.sendStatus(200))
+  .get(cors.cors, (req, res, next) => {
     FishingLocation.find()
-    .then(fishinginfo => {
+      .then((fishinginfo) => {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.json(fishinginfo);
-    })
-    .catch(err => next());
-})
-.post((req, res, next) => {
+      })
+      .catch((err) => next());
+  })
+  .post((req, res, next) => {
     FishingLocation.create(req.body)
-    .then(fishinginfo => {
+      .then((fishinginfo) => {
         console.log('Fishing Document Created ', fishinginfo);
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.json(fishinginfo);
-    })
-    .catch(err => next(err));
-})
-.put((req, res) => {
+      })
+      .catch((err) => next(err));
+  })
+  .put((req, res) => {
     res.statusCode = 403;
     res.end('PUT operation not supported on /fishing');
-})
-.delete((req, res, next) => {
+  })
+  .delete((req, res, next) => {
     FishingLocation.deleteMany()
-    .then(response => {
+      .then((response) => {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.json(response);
-    })
-    .catch(err => next(err));
-});
+      })
+      .catch((err) => next(err));
+  });
 
 module.exports = fishingRouter;
