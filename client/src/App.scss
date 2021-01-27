@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Overpass";
-  src: url("./fonts/overpass-bold.otf");
+  font-family: 'Overpass';
+  src: url('./fonts/overpass-bold.otf');
 }
 
 // Turn off css for chrome browser autofill forms
@@ -12,7 +12,7 @@ input:-webkit-autofill:active {
 }
 
 body {
-  font-family: "Overpass";
+  font-family: 'Overpass';
   background-color: #f4e1d2;
 }
 
@@ -22,7 +22,7 @@ body {
 
 .jumbotron {
   margin: 0;
-  background-image: url("./images/forest.jpg");
+  background-image: url('./images/forest.jpg');
   background-size: contain;
 }
 

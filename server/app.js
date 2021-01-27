@@ -23,13 +23,14 @@ const url = 'mongodb://localhost:27017/wgod';
 const connect = mongoose.connect(url, {
   useCreateIndex: true,
   useFindAndModify: false,
-  useNewUrlParser: true, 
-  useUnifiedTopology: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
 // My Work
-connect.then(() => console.log('Connected correctly to server'),
-  err => console.log(err)
+connect.then(
+  () => console.log('Connected correctly to server'),
+  (err) => console.log(err)
 );
 
 var app = express();
@@ -56,12 +57,12 @@ app.use('/camping', campingRouter);
 app.use('/climbing', climbingRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
