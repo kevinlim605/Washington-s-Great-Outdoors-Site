@@ -85,9 +85,10 @@ function Header() {
               <IconButton
                 className={classes.menuButton}
                 color="inherit"
+                onClick={showSidebar}
                 aria-label="menu"
               >
-                <MenuIcon onClick={showSidebar} />
+                <MenuIcon />
               </IconButton>
               <SidebarNav sidebar={sidebar}>
                 <SidebarWrap>

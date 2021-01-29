@@ -14,7 +14,7 @@ export const FISHING = [
     descriptor:
       'Types of Catch: Summer Steelhead, Dolly Varden, Pink Salmon, Coho Salmon, Chum Salmon, Chinook Salmon and Trout',
     description:
-      'One of Washington true fishing treasures is the Skykomish river located just 45 minutes outside of Seattle. This river systems regularly ranks in the top ten for steelhead fishing with healthy runs of hatchery steelhead and both summer and winter wild steelhead. The Skykomish is un-dammed and free-flowing from its headwaters at the South and North Forks to the lower reaches where it meets up with the Snoqualmie to form the Snohomish.',
+      'One of Washington true fishing treasures is the Skykomish river located just 45 minutes outside of Seattle. This river systems regularly ranks in the top ten for steelhead fishing with healthy runs of hatchery steelhead and both summer and winter wild steelhead. The Skykomish is un-dammed and free-flowing from its headwaters at the South and North Forks to the lower reaches.',
     image: '/images/skykomishriver.jpg',
   },
   {
@@ -23,7 +23,7 @@ export const FISHING = [
     descriptor:
       'Types of Catch: Coho Salmon, Pink Salmon, Chum Salmon Chinook Salmon, and Summer/Winter Steelhead',
     description:
-      'Just beyond the rolling suburban hills of Seattle lies the Snohomish River, which hosts some of the best salmon fishing anywhere in Washington State. Snohomish River salmon fishing is a passtime that anyone in the Everett and Seattle areas to get into fishing in their backyard. The Snohomish River sees returns of Coho Salmon, Pink Salmon, Chum Salmon and Chinook Salmon as well as Summer Steelhead and Winter Steelhead. During the fall salmon fishing season, the river becomes a gathering place for local fishermen.',
+      'Just beyond the rolling suburban hills of Seattle lies the Snohomish River, which hosts some of the best salmon fishing anywhere in Washington State. Snohomish River salmon fishing is a passtime that anyone in the Everett and Seattle areas to get into fishing in their backyard. During the fall salmon fishing season, the river becomes a gathering place for local fishermen.',
     image: '/images/snohomishriver.jpg',
   },
   {
@@ -39,9 +39,9 @@ export const FISHING = [
     id: 4,
     location: 'Edmonds Pier',
     descriptor:
-      'Types of Catch: Rockfish, Flounder, Cabezon, Sculpin, Greenling, Dogfish, Ratfish, and Ling Cod, Salmon, Crab, Squid',
+      'Types of Catch: Rockfish, Flounder, Cabezon, Sculpin, Dogfish, Ratfish, and Ling Cod, Salmon, Crab, Squid',
     description:
-      'If you’re heading to the beautiful state of Washington and want to fish Puget Sound without a boat, you are likely to end up at the Edmonds Fishing Pier. It’s an “L” shaped pier that totals 944 feet and runs parallel to the coast, offering anglers plenty of room to reel in their catch. Built in 1975, the Edmonds Fishing Pier is among Puget Sound’s most popular fishing spots, with over 100,000 anglers visiting each year. Salmon can be caught all year around, and crabbing and squid fishing is a must as well!',
+      'If you’re heading to the beautiful state of Washington and want to fish Puget Sound without a boat, you are likely to end up at the Edmonds Fishing Pier. It’s an “L” shaped pier that totals 944 feet and runs parallel to the coast, offering anglers plenty of room to reel in their catch. Built in 1975, the Edmonds Fishing Pier is among Puget Sound’s most popular fishing spots, with over 100,000 anglers visiting each year.',
     image: '/images/edmondspier.jpg',
   },
 ];

@@ -4,7 +4,7 @@ export const CLIMBING = [
     location: 'Washington Pass',
     descriptor: 'Climbing Style: Granite',
     description:
-      'This amazing, alpine granite paradise is situated right on the Cascade Crest with a starting elevation of 4,875! As climbers, the main draw here is the Liberty Group. When approached from the east by Winthrop, the massive, immaculate granite formations stand like sentinels guarding the area. Unlike other alpine rock in the Cascades, these granite escarpments have long, continuous crack systems. These systems mean the rock is less crumbly and more consistently sustained, making for a much more pleasant and straight-forward climbing experience.',
+      'This amazing, alpine granite paradise is situated right on the Cascade Crest with a starting elevation of 4,875! When approached from the east by Winthrop, the massive, immaculate granite formations stand like sentinels guarding the area. Unlike other alpine rock in the Cascades, these granite escarpments have long, continuous crack systems. These systems mean the rock is less crumbly and more consistently sustained, making for a much more pleasant and straight-forward climbing experience.',
     image: '/images/washingtonpass.jpg',
   },
   {
@@ -20,7 +20,7 @@ export const CLIMBING = [
     location: 'Mount Baker',
     descriptor: 'Climbing Style: Ice climbing, Glacier Climbing',
     description:
-      'Rising to 10,781feet with a nearly 9,000 feet prominence from sea level, Mount Baker demands to be climbed. When viewed from nearby Bellingham, her relief is dramatic! For those wishing to climb Baker, it would be wise to know that after Mount Rainier to the south, Baker is the most glaciated mountain in the lower 48. Indigenous peoples called the mountain Kulshan before white settlers renamed the geological wonder. Kulshan is translated into a multitude of names including “white sentinel,” “puncture wound,” and “crater.”',
+      'Rising to 10,781 feet with a nearly 9,000 feet prominence from sea level, Mount Baker demands to be climbed. When viewed from nearby Bellingham, her relief is dramatic! For those wishing to climb Baker, it would be wise to know that after Mount Rainier to the south, Baker is the most glaciated mountain in the lower 48. Indigenous peoples called the mountain Kulshan before white settlers renamed the geological wonder.',
     image: '/images/mountbaker.jpg',
   },
   {
@@ -36,7 +36,7 @@ export const CLIMBING = [
     location: 'Leavenworth',
     descriptor: 'Climbing Style: Granite',
     description:
-      'As you drive into Leavenworth, it becomes quickly apparent that you are no longer in a PNW, but rather an 18th century Bavarian village somewhere in the Alps. It may seem that Leavenworth is less of a destination for rock climbers as it is for boaters, anglers, and retirees looking for a quirky vacation with a Swiss theme. After the railroad rerouted outside of the town in the early 1900s, the town struggled to maintain. Then in the 1960s, town leaders decided to exploit their Alps-like location by creating a themed town to attract visitors, complete with its own seasonal festivals.',
+      'Within 10 miles of town, you’ll find 50 crags featuring climbs of varied difficulty on clean, solid granite. Outer Space, Orbit, and Iconoclast on Snow Creek Wall are multi-pitch routes that climbers from around the country come to tick off. Meanwhile, the walls of Castle Rock, Midnight Rock, Careno Crag, and Givler’s Dome house many more of the state’s best climbs. These spots boast sandstone slabs that give climbers multi-pitch challenges and jaw-dropping views of the Cascade range.',
     image: '/images/leavenworth.jpg',
   },
 ];

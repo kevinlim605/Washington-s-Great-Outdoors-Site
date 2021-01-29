@@ -8,7 +8,7 @@ function About() {
         <h1>Our Mission</h1>
       </div>
       <Row className="mt-4">
-        <Col xs={{ size: 7 }} className="mx-auto">
+        <Col lg={{ size: 7 }} className="mx-auto">
           <p style={{ fontSize: '18px' }}>
             Nulla ac sapien et lectus pharetra fringilla. Nullam ultrices
             convallis arcu, nec vulputate nisl elementum ut. Quisque sagittis
@@ -17,13 +17,16 @@ function About() {
             libero diam viverra elit, in cursus quam nisl ac erat. Lorem ipsum
             dolor sit amet, consectetur adipiscing elit. Maecenas velit libero,
             finibus vel porta eget, accumsan id mauris. Ut aliquet nec sapien ac
-            molestie. Mauris nibh urna, condimentum eu ligula et, pretium
-            convallis quam. Curabitur et augue est. Morbi lorem quam, vestibulum
-            eu fringilla quis, ornare ac nulla. Morbi ullamcorper condimentum
-            odio, aliquet sagittis metus suscipit ut. Aliquam sed luctus nulla,
-            sollicitudin tincidunt ligula. Donec dolor libero, mattis vel dictum
-            at, elementum a diam. Aenean ac est nec lectus fringilla pulvinar
-            nec in tellus.
+            molestie.
+          </p>
+          <p style={{ fontSize: '18px' }}>
+            Mauris nibh urna, condimentum eu ligula et, pretium convallis quam.
+            Curabitur et augue est. Morbi lorem quam, vestibulum eu fringilla
+            quis, ornare ac nulla. Morbi ullamcorper condimentum odio, aliquet
+            sagittis metus suscipit ut. Aliquam sed luctus nulla, sollicitudin
+            tincidunt ligula. Donec dolor libero, mattis vel dictum at,
+            elementum a diam. Aenean ac est nec lectus fringilla pulvinar nec in
+            tellus.
           </p>
           <p style={{ fontSize: '18px' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
@@ -37,26 +40,23 @@ function About() {
             iaculis orci.
           </p>
         </Col>
-        <Col xs={{ size: 5 }} className="d-none d-lg-block">
+        <Col lg={{ size: 5 }} className="d-none d-lg-block">
           <img
             src="/images/aboutpicture1.jpg"
             alt="aboutpicture1"
-            className="rounded"
+            className="rounded float-right"
           />
         </Col>
       </Row>
-      <Row className="mt-5">
-        <Col
-          xs={{ size: 5 }}
-          className="d-flex justify-content-lg-end d-sm-none d-lg-block"
-        >
+      <Row className="mt-sm-1 mt-lg-5">
+        <Col lg={{ size: 5 }} className="d-none d-lg-block">
           <img
             src="/images/aboutpicture2.jpg"
             alt="aboutpicture2"
             className="rounded"
           />
         </Col>
-        <Col xs={{ size: 7 }} className="mx-auto">
+        <Col lg={{ size: 7 }} className="mx-auto">
           <p style={{ fontSize: '18px' }}>
             Nulla ac sapien et lectus pharetra fringilla. Nullam ultrices
             convallis arcu, nec vulputate nisl elementum ut. Quisque sagittis
@@ -65,13 +65,16 @@ function About() {
             libero diam viverra elit, in cursus quam nisl ac erat. Lorem ipsum
             dolor sit amet, consectetur adipiscing elit. Maecenas velit libero,
             finibus vel porta eget, accumsan id mauris. Ut aliquet nec sapien ac
-            molestie. Mauris nibh urna, condimentum eu ligula et, pretium
-            convallis quam. Curabitur et augue est. Morbi lorem quam, vestibulum
-            eu fringilla quis, ornare ac nulla. Morbi ullamcorper condimentum
-            odio, aliquet sagittis metus suscipit ut. Aliquam sed luctus nulla,
-            sollicitudin tincidunt ligula. Donec dolor libero, mattis vel dictum
-            at, elementum a diam. Aenean ac est nec lectus fringilla pulvinar
-            nec in tellus.
+            molestie.
+          </p>
+          <p style={{ fontSize: '18px' }}>
+            Mauris nibh urna, condimentum eu ligula et, pretium convallis quam.
+            Curabitur et augue est. Morbi lorem quam, vestibulum eu fringilla
+            quis, ornare ac nulla. Morbi ullamcorper condimentum odio, aliquet
+            sagittis metus suscipit ut. Aliquam sed luctus nulla, sollicitudin
+            tincidunt ligula. Donec dolor libero, mattis vel dictum at,
+            elementum a diam. Aenean ac est nec lectus fringilla pulvinar nec in
+            tellus.
           </p>
           <p style={{ fontSize: '18px' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id

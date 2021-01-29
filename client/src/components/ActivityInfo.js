@@ -12,7 +12,7 @@ function ActivityInfo(props) {
       </Row>
       {props.activity.map((activity) => {
         return (
-          <Row className="mt-5 align-items-sm-center align-items-lg-start">
+          <Row className="mt-4 align-items-sm-center align-items-lg-start">
             <Col
               sm={{ size: '12' }}
               lg={{ size: '6' }}
@@ -21,7 +21,8 @@ function ActivityInfo(props) {
               <img src={activity.image} alt="loc 1" className="rounded" />
             </Col>
             <Col
-              sm={{ size: '9' }}
+              xs={{ size: '12' }}
+              sm={{ size: '11' }}
               lg={{ size: '6' }}
               className="mx-auto text-center text-lg-left"
             >
@@ -34,6 +35,7 @@ function ActivityInfo(props) {
               <p>
                 <b>Description: {activity.description}</b>
               </p>
+              <p>See Reviews...</p>
             </Col>
           </Row>
         );

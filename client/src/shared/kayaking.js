@@ -5,7 +5,7 @@ export const KAYAKING = [
     descriptor:
       'Features: Bathrooms, Dog Friendly, Easy Parking, Wildlife, Swimming Hole, Photography',
     description:
-      'Two hours east of Seattle, this glacier-fed lake is a great day-paddle. With 12,623 ft of waterfront and mountain views encompassing the lake, there is plenty to explore. Start your paddle early in the morning if you want to avoid the windy conditions as the day progresses.',
+      "Two hours east of Seattle, this glacier-fed lake is a great day-paddle. With 12,623 ft of waterfront and mountain views encompassing the lake, there is plenty to explore. Pack up your boats at the south campground, where you can use the dock as the boat launch (or the beach, if you're prepared to get your feet wet). It's best to start your paddle early in the morning, when there are calm waters and mountain reflections.",
     image: '/images/lakewenatchee.jpg',
   },
   {
@@ -14,7 +14,7 @@ export const KAYAKING = [
     descriptor:
       'Features: Easy Parking, Family Friendly, Food Nearby, Photography, Wildlife',
     description:
-      'Kayaking west along the shore you’ll be able to see harbor seals, bald eagles, starfish and even some harbor porpoises popping up from time to time. The park itself allows you to dock, hike to its ridge and take in gorgeous views of the surrounding islands and Mt. Baker.',
+      'Amazing wildlife, especially at low tide. Scenic views of the surrounding islands. Kayaking west along the shore you’ll be able to see harbor seals, bald eagles, starfish and even some harbor porpoises popping up from time to time. The park itself allows you to dock, hike to its ridge and take in gorgeous views of the surrounding islands and Mt. Baker.',
     image: '/images/pointdoughty.jpg',
   },
   {
@@ -30,7 +30,7 @@ export const KAYAKING = [
     location: 'Lake Crescent',
     descriptor: 'Features: Swimming, Beach, Photography, Family Friendly',
     description:
-      'Situated in the Olympic Peninsula, Lake Crescent is as gorgeous as it is deep (reportedly 600+ ft in areas!). With crystal clear blue water and 8.5 miles in length, there is plenty to see and explore on the lake. Kayak rentals are available from the Lake Crescent Lodge if desired.',
+      'Glide across the crystal blue waters of Lake Crescent. Head out from the Log Cabin Resort to a nearby beach! Situated in the Olympic Peninsula, Lake Crescent is as gorgeous as it is deep (reportedly 600+ ft in areas!). With crystal clear blue water and 8.5 miles in length, there is plenty to see and explore on the lake. Kayak rentals are available from the Lake Crescent Lodge if desired.',
     image: '/images/lakecrescent.jpg',
   },
   {
@@ -39,7 +39,7 @@ export const KAYAKING = [
     descriptor:
       'Features: Stand Up Paddle, Easy Parking, Family Friendly, Food Nearby',
     description:
-      'As the sun sets over Queen Anne Hill, there are few better places to be in Seattle than Lake Union. Sitting just 2 miles from downtown Seattle, the Lake is a quick escape from the hustle and bustle of the city. No matter the season, catching a sunset and dusk on the lake is absolutely stunning.',
+      'A perfect spot to enjoy the sunset with panoramic views of the Seattle Skyline, Queen Anne Hill, Gasworks Park & the Seattle Houseboats. As the sun sets over Queen Anne Hill, there are few better places to be in Seattle than Lake Union. Sitting just 2 miles from downtown Seattle, the Lake is a quick escape from the hustle and bustle of the city. No matter the season, catching a sunset and dusk on the lake is absolutely stunning.',
     image: '/images/lakeunion.jpg',
   },
 ];
