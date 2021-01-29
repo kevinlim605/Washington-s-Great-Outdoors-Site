@@ -17,7 +17,7 @@ function Footer() {
   const classes = useStyles();
 
   return (
-    <div className="site-footer fixed-bottom">
+    <div className="site-footer">
       <Container>
         <Row>
           <Col className="text-center">

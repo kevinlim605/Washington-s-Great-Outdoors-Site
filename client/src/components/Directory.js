@@ -10,7 +10,6 @@ import {
   IconButton,
   Typography,
 } from '@material-ui/core';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { Container, Row, Col } from 'reactstrap';
@@ -29,6 +28,8 @@ const useStyles = makeStyles({
 });
 
 function RenderDirectoryCard(props) {
+  const classes = useStyles();
+
   return (
     <Col
       xs={{ size: '8' }}
@@ -36,22 +37,19 @@ function RenderDirectoryCard(props) {
       lg={{ size: '4' }}
       className="mt-4 mx-auto"
     >
-      <Card className={props.classes.root}>
+      <Card className={classes.root}>
         <CardHeader
-          action={
-            <IconButton aria-label="settings">
-              <MoreVertIcon />
-            </IconButton>
-          }
-          className={props.classes.card}
+          // action={
+          //   <IconButton aria-label="settings">
+          //     <MoreVertIcon />
+          //   </IconButton>
+          // }
+          className={classes.card}
           title={props.activity.name}
           subheader="Check out our locations"
         />
         <Link to={`/directory/${props.activity.name.toLowerCase()}`}>
-          <CardMedia
-            className={props.classes.media}
-            image={props.activity.image}
-          />
+          <CardMedia className={classes.media} image={props.activity.image} />
         </Link>
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
@@ -59,9 +57,6 @@ function RenderDirectoryCard(props) {
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
-          </IconButton>
           <IconButton aria-label="share">
             <ShareIcon />
           </IconButton>
@@ -72,8 +67,6 @@ function RenderDirectoryCard(props) {
 }
 
 function Directory(props) {
-  const classes = useStyles();
-
   return (
     <Container>
       <div className="mt-5">
@@ -81,7 +74,7 @@ function Directory(props) {
       </div>
       <Row>
         {props.activities.map((activity) => {
-          return <RenderDirectoryCard classes={classes} activity={activity} />;
+          return <RenderDirectoryCard activity={activity} />;
         })}
       </Row>
     </Container>

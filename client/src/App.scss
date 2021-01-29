@@ -30,3 +30,9 @@ body {
   background-color: #86592d;
   padding: 10px 0;
 }
+
+@media (min-width: 1200px) {
+  .tableSelector {
+    margin-left: 42px;
+  }
+}
